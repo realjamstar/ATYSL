@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello? Who call me? Umm "YSL"</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display, Cormorant Garamond, Montserrat, & Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Montserrat:wght@300;400;500;600&family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Fonts Configuration */
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-prompt { font-family: 'Prompt', sans-serif; }
+
+        /* Smooth quote fade & rise animation */
+        .quote-fade-in {
+            animation: quoteFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes quoteFade {
+            0% {
+                opacity: 0;
+                transform: translateY(12px) scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Earth tone custom gradients & glow effects */
+        .glass-card {
+            background: rgba(32, 28, 25, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 196, 176, 0.18);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        .btn-gold-glow {
+            box-shadow: 0 4px 20px rgba(140, 109, 88, 0.25);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-gold-glow:hover {
+            box-shadow: 0 8px 30px rgba(184, 150, 110, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Golden shimmer text highlight */
+        .gold-shimmer {
+            background: linear-gradient(135deg, #f7f4ef 0%, #d4c4b0 50%, #8c6d58 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen w-full relative flex items-center justify-center p-4 sm:p-6 overflow-x-hidden bg-[#1a1614] font-montserrat">
+
+    <!-- Background Image with Custom Opacity and Earth Tone Gradients -->
+    <div class="fixed inset-0 z-0 overflow-hidden">
+        <img 
+            src="anton lee for ysl.jpg" 
+            alt="Anton Lee YSL Background" 
+            class="w-full h-full object-cover object-center scale-105 filter brightness-75 contrast-105 opacity-80"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1920&q=80';"
+        />
+        <!-- Multi-layered Luxury Earth Tone Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#14110f] via-[#241f1c]/70 to-[#2b352e]/50"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#14110f_90%)] opacity-80"></div>
+    </div>
+
+    <!-- Main Floating Glass Container -->
+    <main class="relative z-10 w-full max-w-xl glass-card rounded-3xl p-6 sm:p-10 text-[#F7F4EF] transition-all">
+        
+        <!-- YSL Subtle Brand Accent Tag -->
+        <div class="flex justify-center mb-4">
+            <span class="tracking-[0.3em] text-[10px] sm:text-xs uppercase font-semibold text-[#D4C4B0]/80 border-b border-[#8C6D58]/40 pb-1">
+                Saint Laurent Mood
+            </span>
+        </div>
+
+        <!-- Headline Section -->
+        <header class="text-center mb-8">
+            <h1 class="font-playfair text-2xl sm:text-4xl italic font-bold tracking-tight text-white leading-tight drop-shadow-md">
+                Hello? Who call me?<br>
+                <span class="font-normal not-italic tracking-wider uppercase text-2xl sm:text-3xl gold-shimmer block mt-1">
+                    Umm "YSL"
+                </span>
+            </h1>
+        </header>
+
+        <!-- Dynamic Quote Card -->
+        <section class="relative bg-[#1f2821]/50 border border-[#5C6F5E]/30 rounded-2xl p-6 sm:p-8 mb-8 min-h-[180px] flex flex-col justify-between items-center text-center shadow-inner">
+            <i class="fa-solid fa-quote-left text-2xl text-[#8C6D58]/40 mb-3"></i>
+            
+            <div id="quote-container" class="my-auto quote-fade-in">
+                <p id="quote-text" class="font-cormorant text-xl sm:text-2xl font-medium italic text-[#F7F4EF] leading-relaxed tracking-wide">
+                    "Fashions fade, style is eternal."
+                </p>
+                <p id="quote-sub" class="font-prompt text-xs sm:text-sm text-[#D4C4B0]/80 mt-3 font-light">
+                    แฟชั่นเปลี่ยนไป แต่สไตล์จะคงอยู่ตลอดกาล
+                </p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-[#8C6D58]/20 w-full flex items-center justify-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#5C6F5E]"></span>
+                <span id="quote-tag" class="text-[11px] uppercase tracking-widest text-[#D4C4B0]/70 font-medium">
+                    Attitude & Elegance
+                </span>
+            </div>
+        </section>
+
+        <!-- Main Randomize Button -->
+        <div class="mb-4">
+            <button 
+                id="random-btn" 
+                class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#5C6F5E] via-[#4A5D4E] to-[#3B483C] hover:from-[#6F8271] hover:to-[#4A5D4E] active:scale-[0.98] text-[#F7F4EF] font-semibold text-sm tracking-widest uppercase btn-gold-glow border border-[#8C6D58]/40 flex items-center justify-center gap-3 transition-all duration-300">
+                <i class="fa-solid fa-sparkles text-xs text-[#D4C4B0]"></i>
+                <span>Pick perfect one</span>
+            </button>
+        </div>
+
+        <!-- Secondary Buttons (Copy & Share to X) -->
+        <div class="grid grid-cols-2 gap-3">
+            <!-- Copy Button -->
+            <button 
+                id="copy-btn" 
+                class="py-3 px-4 rounded-xl bg-[#3B322C]/60 hover:bg-[#4A3B32] border border-[#8C6D58]/30 text-[#F7F4EF] font-medium text-xs sm:text-sm tracking-wider transition-all duration-200 flex items-center justify-center gap-2 hover:border-[#8C6D58]/60 active:scale-[0.98]">
+                <i class="fa-regular fa-copy text-xs text-[#D4C4B0]"></i>
+                <span>Copy</span>
+            </button>
+
+            <!-- Share to X Button -->
+            <button 
+                id="share-btn" 
+                class="py-3 px-4 rounded-xl bg-[#181818]/70 hover:bg-black border border-white/10 text-[#F7F4EF] font-medium text-xs sm:text-sm tracking-wider transition-all duration-200 flex items-center justify-center gap-2 hover:border-white/30 active:scale-[0.98]">
+                <i class="fa-brands fa-x-twitter text-xs text-white"></i>
+                <span>Share to your X</span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div 
+        id="toast" 
+        class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#2A231F] border border-[#8C6D58] text-[#F7F4EF] px-5 py-3 rounded-full shadow-2xl text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2.5 opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4">
+        <i class="fa-solid fa-check text-[#5C6F5E]"></i>
+        <span id="toast-message">Copied to clipboard with elegance.</span>
+    </div>
+
+    <script>
+        // High Fashion, Chic Lifestyle & Attitude Quotes Database
+        const quotes = [
+            {
+                en: "Fashions fade, style is eternal.",
+                th: "แฟชั่นอาจร่วงโรยไปตามกาลเวลา แต่สไตล์จะเป็นอมตะตลอดไป",
+                tag: "Yves Saint Laurent"
+            },
+            {
+                en: "Elegance is not standing out, but being remembered.",
+                th: "ความสง่างามไม่ได้หมายถึงการโดดเด่นที่สุด แต่คือการเป็นที่จดจำตลอดไป",
+                tag: "Attitude & Grace"
+            },
+            {
+                en: "Overcoming fear is the secret to a high-fashion attitude.",
+                th: "การเอาชนะความกลัว คือเคล็ดลับของทัศนคติที่ดูดีมีระดับ",
+                tag: "Confidence"
+            },
+            {
+                en: "Dressing is a way of life. Make it effortless.",
+                th: "การแต่งกายคือวิถีชีวิต จงทำให้มันเรียบง่ายแต่ดูดีอย่างทรงพลัง",
+                tag: "Chic Lifestyle"
+            },
+            {
+                en: "Self-confidence is the best outfit. Rock it and own it.",
+                th: "ความมั่นใจในตัวเองคือชุดที่ดีที่สุด สวมมันด้วยความภาคภูมิใจ",
+                tag: "Self Love"
+            },
+            {
+                en: "Walk like you have three men walking behind you.",
+                th: "ก้าวเดินอย่างมั่นใจ ราวกับทั้งโลกกำลังจับจ้องและซัพพอร์ตคุณอยู่",
+                tag: "High Energy"
+            },
+            {
+                en: "Simplicity is the keynote of all true elegance.",
+                th: "ความเรียบง่าย คือหัวใจสำคัญของความสง่างามที่แท้จริง",
+                tag: "Minimal Luxury"
+            },
+            {
+                en: "Life is not perfect, but your outfit can be.",
+                th: "ชีวิตอาจไม่เพอร์เฟกต์ทุกวัน แต่วันนี้สไตล์ของคุณเพอร์เฟกต์ได้เสมอ",
+                tag: "Elegance"
+            }
+        ];
+
+        // DOM Elements Selection
+        const quoteContainer = document.getElementById('quote-container');
+        const quoteText = document.getElementById('quote-text');
+        const quoteSub = document.getElementById('quote-sub');
+        const quoteTag = document.getElementById('quote-tag');
+        const randomBtn = document.getElementById('random-btn');
+        const copyBtn = document.getElementById('copy-btn');
+        const shareBtn = document.getElementById('share-btn');
+        const toast = document.getElementById('toast');
+
+        let lastIndex = -1;
+
+        // Randomize Quote Logic
+        function pickPerfectOne() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * quotes.length);
+            } while (randomIndex === lastIndex && quotes.length > 1);
+
+            lastIndex = randomIndex;
+            const current = quotes[randomIndex];
+
+            // Animate quote element seamlessly
+            quoteContainer.classList.remove('quote-fade-in');
+            void quoteContainer.offsetWidth; // Trigger reflow for keyframe animation
+
+            quoteText.innerText = `"${current.en}"`;
+            quoteSub.innerText = current.th;
+            quoteTag.innerText = current.tag;
+
+            quoteContainer.classList.add('quote-fade-in');
+        }
+
+        // Show Luxury Toast Banner
+        function showToast(message) {
+            toast.querySelector('span').innerText = message;
+            toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }, 2500);
+        }
+
+        // Copy Text to Clipboard (Iframe Guard Compatible)
+        function copyQuote() {
+            const textToCopy = `${quoteText.innerText}\n${quoteSub.innerText}`;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                document.execCommand('copy');
+                showToast("Copied quote to clipboard.");
+            } catch (err) {
+                showToast("Unable to copy text.");
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+
+        // Direct Share to Twitter / X
+        function shareToX() {
+            const text = `${quoteText.innerText}\n${quoteSub.innerText}\n\nHello? Who call me? Umm "YSL" ✨`;
+            const encodedText = encodeURIComponent(text);
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
+            window.open(twitterUrl, '_blank', 'width=600,height=450');
+        }
+
+        // Event Listeners Registration
+        randomBtn.addEventListener('click', pickPerfectOne);
+        copyBtn.addEventListener('click', copyQuote);
+        shareBtn.addEventListener('click', shareToX);
+
+        window.onload = function() {
+            pickPerfectOne();
+        };
+    </script>
+</body>
+</html>
